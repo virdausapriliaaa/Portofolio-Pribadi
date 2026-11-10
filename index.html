@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Portfolio Virda</title>
+
+    <style>
+
+           /* LOGO WEBSITE */
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #db2777;
+    white-space: nowrap;
+    position: relative;
+    z-index: 60;
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #fbcfe8, #e9d5ff);
+    box-shadow: 0 4px 12px rgba(219, 39, 119, 0.15);
+    font-size: 21px;
+}
+
+.brand-name {
+    background: linear-gradient(90deg, #ec4899, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fff7fb, #fce7f3, #f3e8ff);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .gradient-text {
+    background: linear-gradient(90deg, #ec4899, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(65px);
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .float {
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .card-hover {
+            transition: 0.3s;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(219,39,119,0.15);
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        /* Tampilan tombol navigasi */
+        .nav-button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font: inherit;
+            color: inherit;
+        }
+
+        .nav-button:hover {
+            color: #ec4899;
+        }
+    </style>
+</head>
+
+<body class="text-gray-700">
+
+    <!-- DEKORASI -->
+    <div class="blob bg-pink-300 w-72 h-72 top-20 left-0"></div>
+    <div class="blob bg-purple-300 w-72 h-72 top-96 right-0"></div>
+
+
+    <!-- NAVIGASI -->
+    <nav class="glass sticky top-0 z-50 px-5 md:px-12 py-4">
+
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+            <a href="#home" class="brand-logo">
+
+    <span class="brand-icon">🌷</span>
+
+    <span class="brand-name">
+        Virda.
+    </span>
+
+</a>
+
+            <div class="flex gap-3 sm:gap-5 md:gap-8 text-xs sm:text-sm font-semibold">
+
+                <button type="button" onclick="scrollKe('home')" class="nav-button">
+                    Beranda
+                </button>
+
+                <button type="button" onclick="scrollKe('about')" class="nav-button">
+                    Tentang Saya
+                </button>
+
+                <button type="button" onclick="scrollKe('skills')" class="nav-button">
+                    Keahlian
+                </button>
+
+                <button type="button" onclick="scrollKe('portfolio')" class="nav-button">
+                    Portofolio
+                </button>
+
+                <button type="button" onclick="scrollKe('motto')" class="nav-button">
+                    Motto
+                </button>
+
+            </div>
+
+            <button type="button" onclick="scrollKe('motto')"
+                class="hidden sm:block bg-gradient-to-r from-pink-500 to-purple-500 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition cursor-pointer">
+                Motto Saya ↗
+            </button>
+
+        </div>
+    </nav>
+
+
+    <!-- BERANDA -->
+    <section id="home" class="min-h-[85vh] flex items-center px-6 md:px-16 py-16">
+
+        <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-8 md:gap-16">
+
+            <div class="flex-1">
+
+                <div class="inline-block glass rounded-full px-5 py-2 text-pink-600 text-xs sm:text-sm mb-6 shadow-sm">
+                    ✨ Selamat Datang di Dunia Kecilku
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-black leading-tight text-gray-800">
+                    Halo,<br>
+                    Saya <span class="gradient-text">Virda.</span>
+                </h1>
+
+                <h2 class="text-lg md:text-2xl font-semibold mt-5 text-gray-600">
+                    Pelajar & Pembelajar Kreatif
+                </h2>
+
+                <p class="text-gray-500 leading-relaxed mt-5 max-w-lg text-sm md:text-base">
+                    Sebuah ruang kecil untuk berbagi cerita,
+                    kreativitas, dan perjalanan saya di dunia teknologi.
+                    Saya senang belajar, berkarya, dan menemukan
+                    hal-hal baru setiap harinya.
+                </p>
+
+                <!-- TOMBOL BERANDA -->
+                <div class="flex flex-wrap gap-4 mt-8">
+
+                    <button type="button" onclick="scrollKe('about')"
+                        class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-7 py-3 rounded-full shadow-lg hover:shadow-pink-300 hover:scale-105 transition cursor-pointer">
+                        Kenali Saya ♡
+                    </button>
+
+                    <button type="button" onclick="scrollKe('portfolio')"
+                        class="glass text-pink-600 border border-pink-200 px-7 py-3 rounded-full hover:bg-pink-100 transition cursor-pointer">
+                        Lihat Karya Saya ↗
+                    </button>
+
+                </div>
+
+                <div class="flex flex-wrap gap-6 mt-10 text-sm text-gray-500">
+                    <span>♡ Kreatif</span>
+                    <span>✧ Rasa Ingin Tahu</span>
+                    <span>☁ Pemimpi</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO PROFIL -->
+            <div class="relative flex justify-center items-center flex-1 py-8">
+
+                <div class="absolute w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-pink-300 to-purple-300 rounded-full opacity-60 blur-2xl"></div>
+
+                <div class="relative w-56 h-64 sm:w-60 sm:h-72 md:w-80 md:h-96 rounded-[45%_45%_25%_25%] border-[8px] border-white shadow-2xl overflow-hidden float">
+
+                    <img
+                        src="gambar1.jpg"
+                        alt="Foto Profil Virda"
+                        class="w-full h-full object-cover">
+
+                </div>
+
+                <div class="absolute top-8 -left-2 sm:left-0 glass rounded-2xl p-3 shadow-xl float">
+                    <p class="text-pink-600 font-bold text-sm">🌷 Halo!</p>
+                    <p class="text-xs text-gray-500">Senang bertemu dengan anda</p>
+                </div>
+
+                <div class="absolute bottom-5 -right-2 sm:right-0 glass rounded-2xl px-5 py-3 shadow-xl">
+                    <p class="font-bold gradient-text">Raih Impian ♡</p>
+                    <p class="text-xs text-gray-500">Terus Berkembang</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TENTANG SAYA -->
+    <section id="about" class="px-6 py-20">
+
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center mb-12">
+                <p class="text-pink-500 font-bold tracking-widest text-sm">
+                    KENALI SAYA LEBIH DEKAT
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-black mt-3">
+                    Tentang <span class="gradient-text">Saya</span>
+                </h2>
+            </div>
+
+            <div class="glass rounded-3xl p-8 md:p-12 shadow-xl text-center">
+
+                <div class="text-5xl mb-5">🌸</div>
+
+                <p class="text-gray-600 leading-loose max-w-3xl mx-auto">
+                    Halo! Aku Virda, seorang pelajar yang memiliki
+                    ketertarikan pada dunia teknologi dan desain.
+                    Aku senang mengeksplorasi hal baru, belajar
+                    membuat website, dan mengembangkan kreativitas.
+                    Bagiku, setiap proses belajar adalah kesempatan
+                    untuk menjadi lebih baik.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-10">
+
+                    <div class="bg-white/70 rounded-2xl p-6 card-hover">
+                        <div class="text-3xl">🎓</div>
+                        <h3 class="font-bold mt-3">Pendidikan</h3>
+                        <p class="text-sm text-gray-500 mt-1">Perjalanan Belajar Saya</p>
+                    </div>
+
+                    <div class="bg-white/70 rounded-2xl p-6 card-hover">
+                        <div class="text-3xl">🎨</div>
+                        <h3 class="font-bold mt-3">Kreativitas</h3>
+                        <p class="text-sm text-gray-500 mt-1">Desain & Seni</p>
+                    </div>
+
+                    <div class="bg-white/70 rounded-2xl p-6 card-hover">
+                        <div class="text-3xl">💻</div>
+                        <h3 class="font-bold mt-3">Teknologi</h3>
+                        <p class="text-sm text-gray-500 mt-1">Pengembangan Website</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- KEAHLIAN -->
+    <section id="skills" class="px-6 py-20">
+
+        <div class="max-w-5xl mx-auto text-center">
+
+            <p class="text-pink-500 font-bold tracking-widest text-sm">
+                KEMAMPUAN SAYA
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-black mt-3">
+                Keahlian <span class="gradient-text">Saya</span>
+            </h2>
+
+            <p class="text-gray-500 mt-4">
+                Berbagai hal yang sedang saya pelajari dan kembangkan.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mt-12">
+
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="text-4xl">🌐</div>
+                    <h3 class="font-bold mt-4">HTML</h3>
+                    <p class="text-sm text-gray-500 mt-2">Struktur Website</p>
+                </div>
+
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="text-4xl">🎨</div>
+                    <h3 class="font-bold mt-4">CSS</h3>
+                    <p class="text-sm text-gray-500 mt-2">Tampilan Website</p>
+                </div>
+
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="text-4xl">💗</div>
+                    <h3 class="font-bold mt-4">Tailwind CSS</h3>
+                    <p class="text-sm text-gray-500 mt-2">Desain Modern</p>
+                </div>
+
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="text-4xl">💻</div>
+                    <h3 class="font-bold mt-4">PHP</h3>
+                    <p class="text-sm text-gray-500 mt-2">Pemrograman</p>
+                </div>
+
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="text-4xl">🗄️</div>
+                    <h3 class="font-bold mt-4">MySQL</h3>
+                    <p class="text-sm text-gray-500 mt-2">Basis Data</p>
+                </div>
+
+                <div class="glass rounded-2xl p-7 card-hover">
+                    <div class="text-4xl">🌷</div>
+                    <h3 class="font-bold mt-4">WordPress</h3>
+                    <p class="text-sm text-gray-500 mt-2">Desain Website</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    
+<!-- PORTOFOLIO: 3 KARTU -->
+<section id="portfolio" class="px-6 py-20">
+
+    <div class="max-w-6xl mx-auto text-center">
+
+        <p class="text-pink-500 font-bold tracking-widest text-sm">
+            HASIL KARYA SAYA
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-black mt-3">
+            Portofolio <span class="gradient-text">Saya</span>
+        </h2>
+
+        <p class="text-gray-500 mt-4">
+            Beberapa proyek dan karya yang pernah saya pelajari dan kembangkan.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-12">
+
+            <!-- KARTU 1: WEBSITE PRIBADI -->
+            <div class="glass rounded-3xl overflow-hidden card-hover shadow-lg">
+
+                <!-- AREA GAMBAR -->
+                <div class="h-[280px] bg-gradient-to-br from-pink-200 via-purple-200 to-pink-100 flex items-center justify-center overflow-hidden p-3">
+                    <img
+                        src="web.JPG"
+                        alt="Preview Website Pribadi"
+                        class="w-full h-full object-contain rounded-xl">
+                </div>
+
+                <!-- AREA TULISAN -->
+                <div class="p-7 text-left">
+
+                    <span class="text-pink-500 text-xs font-bold">
+                        DESAIN WEB
+                    </span>
+
+                    <h3 class="text-xl font-bold mt-2">
+                        Website Pribadi
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                        Website pribadi untuk memperkenalkan diri,
+                        menampilkan informasi, dan membagikan kreativitas saya.
+                    </p>
+
+                    <div class="flex gap-2 mt-5 flex-wrap">
+                        <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs">HTML</span>
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- KARTU 2: APLIKASI UKS -->
+            <div class="glass rounded-3xl overflow-hidden card-hover shadow-lg">
+
+                <!-- AREA GAMBAR -->
+                <div class="h-[280px] bg-gradient-to-br from-purple-200 via-blue-200 to-pink-200 flex items-center justify-center overflow-hidden p-3">
+                    <img
+                        src="uks.JPG"
+                        alt="Preview Aplikasi UKS"
+                        class="w-full h-full object-contain rounded-xl">
+                </div>
+
+                <!-- AREA TULISAN -->
+                <div class="p-7 text-left">
+
+                    <span class="text-pink-500 text-xs font-bold">
+                        PENGEMBANGAN APLIKASI
+                    </span>
+
+                    <h3 class="text-xl font-bold mt-2">
+                        Aplikasi UKS
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                        Proyek aplikasi untuk membantu pengelolaan
+                        data kunjungan siswa, penanganan, dan administrasi UKS.
+                    </p>
+
+                    <div class="flex gap-2 mt-5 flex-wrap">
+                        <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs">PHP</span>
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-xs">MySQL</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            
+<!-- KARTU 3: DESAIN FIGMA -->
+<div class="glass rounded-3xl overflow-hidden card-hover shadow-lg">
+
+    <!-- AREA LOGO FIGMA -->
+    <div class="h-[280px] bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center">
+
+        <div class="w-36 h-36 bg-white rounded-[30px] shadow-xl flex items-center justify-center">
+            <svg viewBox="0 0 100 100" class="w-24 h-24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 5 H30 A20 20 0 0 0 30 45 H50 Z" fill="#F24E1E"/>
+                <path d="M50 5 H70 A20 20 0 0 1 70 45 H50 Z" fill="#FF7262"/>
+                <path d="M50 45 H30 A20 20 0 0 0 30 85 A20 20 0 0 0 50 65 Z" fill="#A259FF"/>
+                <path d="M50 45 H70 A20 20 0 1 1 50 65 Z" fill="#1ABCFE"/>
+                <circle cx="70" cy="25" r="20" fill="#0ACF83"/>
+            </svg>
+        </div>
+
+    </div>
+
+    <!-- AREA TULISAN -->
+    <div class="p-7 text-left">
+
+        <span class="text-pink-500 text-xs font-bold">
+            UI/UX DESIGN
+        </span>
+
+        <h3 class="text-xl font-bold mt-2">
+            Desain Figma
+        </h3>
+
+        <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+            Karya desain antarmuka menggunakan Figma,
+            mulai dari pemilihan warna, tata letak,
+            hingga tampilan halaman yang menarik.
+        </p>
+
+        <div class="flex gap-2 mt-5 flex-wrap">
+            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs">Figma</span>
+            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-xs">UI Design</span>
+        </div>
+
+    </div>
+</div>
+</section>
+
+
+
+    <!-- MOTTO -->
+    <section id="motto" class="px-6 py-24">
+
+        <div class="max-w-5xl mx-auto">
+
+            <div class="glass rounded-[35px] p-8 md:p-16 text-center shadow-xl relative overflow-hidden">
+
+                <div class="absolute -top-16 -left-16 w-48 h-48 bg-pink-200 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+                <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-purple-200 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+                <div class="relative z-10">
+
+                    <div class="text-5xl mb-6">🌸</div>
+
+                    <p class="text-pink-500 font-bold tracking-widest text-sm">
+                        MOTTO & PRINSIP HIDUP
+                    </p>
+
+                    <h2 class="text-4xl md:text-5xl font-black mt-4">
+                        Terus Belajar,
+                        <span class="gradient-text">Terus Bertumbuh.</span>
+                    </h2>
+
+                    <p class="text-gray-500 leading-relaxed max-w-2xl mx-auto mt-8 text-base md:text-lg">
+                        "Tidak harus menjadi sempurna untuk memulai,
+                        cukup berani melangkah dan terus berkembang."
+                    </p>
+
+                    <div class="w-20 h-1 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full mx-auto mt-8"></div>
+
+                    <p class="text-gray-600 font-semibold mt-6">
+                        — Prinsip Hidup Virda ♡
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-12">
+
+                        <div class="bg-white/70 rounded-2xl p-6 card-hover">
+                            <div class="text-3xl">🌱</div>
+                            <h3 class="font-bold mt-3">Terus Belajar</h3>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Selalu terbuka untuk ilmu dan pengalaman baru.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/70 rounded-2xl p-6 card-hover">
+                            <div class="text-3xl">✨</div>
+                            <h3 class="font-bold mt-3">Berani Mencoba</h3>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Tidak takut memulai dan mengeksplorasi hal baru.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/70 rounded-2xl p-6 card-hover">
+                            <div class="text-3xl">🦋</div>
+                            <h3 class="font-bold mt-3">Terus Berkembang</h3>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Menjadikan setiap proses sebagai pengalaman berharga.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="text-center py-8 border-t border-pink-200/50">
+
+        <h2 class="text-2xl font-black gradient-text">Virda.</h2>
+
+        <p class="text-gray-500 text-sm mt-3">
+            Dibuat oleh Virda
+        </p>
+
+        <p class="text-gray-400 text-xs mt-2">
+            © 2026 | Terus Berkarya dan Berkembang.
+        </p>
+
+    </footer>
+
+
+    <!-- FUNGSI TOMBOL NAVIGASI -->
+    <script>
+        function scrollKe(id) {
+            const bagian = document.getElementById(id);
+
+            if (bagian) {
+                const posisi =
+                    bagian.getBoundingClientRect().top + window.scrollY - 75;
+
+                window.scrollTo({
+                    top: posisi,
+                    behavior: "smooth"
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
