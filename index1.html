@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Portfolio Virda - Beranda</title>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            background: linear-gradient(135deg, #fff7fb, #fce7f3, #f3e8ff);
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .glass {
+            background: rgba(255,255,255,0.65);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg,#ec4899,#a855f7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(65px);
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .float { animation: floating 4s ease-in-out infinite; }
+        @keyframes floating {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .card-hover { transition: 0.3s; }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(219,39,119,0.15);
+        }
+        .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            white-space: nowrap;
+        }
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background: linear-gradient(135deg,#fbcfe8,#e9d5ff);
+            box-shadow: 0 4px 12px rgba(219,39,119,0.15);
+            font-size: 21px;
+        }
+        .brand-name {
+            background: linear-gradient(90deg,#ec4899,#a855f7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link { transition: 0.3s; }
+        .nav-link:hover { color: #ec4899; }
+        .active-link { color: #ec4899; }
+    </style>
+</head>
+
+<body class="text-gray-700">
+
+    <!-- DEKORASI -->
+    <div class="blob bg-pink-300 w-72 h-72 top-20 left-0"></div>
+    <div class="blob bg-purple-300 w-72 h-72 top-96 right-0"></div>
+
+    <!-- NAVIGASI -->
+    <nav class="glass sticky top-0 z-50 px-5 md:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon">🌷</span>
+                <span class="brand-name">Virda.</span>
+            </a>
+
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-5 md:gap-8 text-xs sm:text-sm font-semibold">
+                <a href="index.html" class="nav-link active-link">Beranda</a>
+                <a href="tentang.html" class="nav-link">Tentang Saya</a>
+                <a href="keahlian.html" class="nav-link">Keahlian</a>
+                <a href="portofolio.html" class="nav-link">Portofolio</a>
+                <a href="motto.html" class="nav-link">Motto</a>
+            </div>
+
+            <a href="motto.html"
+                class="hidden sm:block bg-gradient-to-r from-pink-500 to-purple-500 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition">
+                Motto Saya ↗
+            </a>
+        </div>
+    </nav>
+
+    <!-- BERANDA -->
+    <section class="min-h-[85vh] flex items-center px-6 pt-12 pb-20">
+
+        <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-8 md:gap-16">
+
+            <div class="flex-1">
+
+                <div class="inline-block glass rounded-full px-5 py-2 text-pink-600 text-xs sm:text-sm mb-6 shadow-sm">
+                    ✨ Selamat Datang di Dunia Kecilku
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-black leading-tight text-gray-800">
+                    Halo,<br>
+                    Saya <span class="gradient-text">Virda.</span>
+                </h1>
+
+                <h2 class="text-lg md:text-2xl font-semibold mt-5 text-gray-600">
+                    Pelajar & Pembelajar Kreatif
+                </h2>
+
+                <p class="text-gray-500 leading-relaxed mt-5 max-w-lg text-sm md:text-base">
+                    Sebuah ruang kecil untuk berbagi cerita,
+                    kreativitas, dan perjalanan saya di dunia teknologi.
+                    Saya senang belajar, berkarya, dan menemukan
+                    hal-hal baru setiap harinya.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <a href="tentang.html"
+                        class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-7 py-3 rounded-full shadow-lg hover:shadow-pink-300 hover:scale-105 transition">
+                        Kenali Saya ♡
+                    </a>
+
+                    <a href="portofolio.html"
+                        class="glass text-pink-600 border border-pink-200 px-7 py-3 rounded-full hover:bg-pink-100 transition">
+                        Lihat Karya Saya ↗
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap gap-6 mt-10 text-sm text-gray-500">
+                    <span>♡ Kreatif</span>
+                    <span>✧ Rasa Ingin Tahu</span>
+                    <span>☁ Pemimpi</span>
+                </div>
+            </div>
+
+            <!-- FOTO PROFIL -->
+            <div class="relative flex justify-center items-center flex-1 py-8">
+
+                <div class="absolute w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-pink-300 to-purple-300 rounded-full opacity-60 blur-2xl"></div>
+
+                <div class="relative w-56 h-64 sm:w-60 sm:h-72 md:w-80 md:h-96 rounded-[45%_45%_25%_25%] border-[8px] border-white shadow-2xl overflow-hidden float">
+                    <img src="img/gambar1.jpg" alt="Foto Profil Virda"
+                        class="w-full h-full object-cover">
+                </div>
+
+                <div class="absolute top-8 -left-2 sm:left-0 glass rounded-2xl p-3 shadow-xl float">
+                    <p class="text-pink-600 font-bold text-sm">🌷 Halo!</p>
+                    <p class="text-xs text-gray-500">Senang bertemu dengan anda</p>
+                </div>
+
+                <div class="absolute bottom-5 -right-2 sm:right-0 glass rounded-2xl px-5 py-3 shadow-xl">
+                    <p class="font-bold gradient-text">Raih Impian ♡</p>
+                    <p class="text-xs text-gray-500">Terus Berkembang</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-8 border-t border-pink-200/50">
+        <h2 class="text-2xl font-black gradient-text">Virda.</h2>
+        <p class="text-gray-500 text-sm mt-3">Dibuat oleh Virda</p>
+        <p class="text-gray-400 text-xs mt-2">
+            © 2026 | Terus Berkarya dan Berkembang.
+        </p>
+    </footer>
+
+</body>
+</html>
