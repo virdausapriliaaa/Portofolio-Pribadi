@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Portfolio Virda - Motto</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg,#fff7fb,#fce7f3,#f3e8ff);
+            font-family: 'Segoe UI',sans-serif;
+        }
+
+        .glass {
+            background: rgba(255,255,255,0.65);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg,#ec4899,#a855f7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(65px);
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .card-hover {
+            transition: 0.3s;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(219,39,119,0.15);
+        }
+
+        .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            white-space: nowrap;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background: linear-gradient(135deg,#fbcfe8,#e9d5ff);
+            box-shadow: 0 4px 12px rgba(219,39,119,0.15);
+            font-size: 21px;
+        }
+
+        .brand-name {
+            background: linear-gradient(90deg,#ec4899,#a855f7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ec4899;
+        }
+
+        .active-link {
+            color: #ec4899;
+        }
+    </style>
+</head>
+
+<body class="text-gray-700">
+
+    <!-- DEKORASI -->
+    <div class="blob bg-pink-300 w-72 h-72 top-20 left-0"></div>
+    <div class="blob bg-purple-300 w-72 h-72 top-96 right-0"></div>
+
+    <!-- NAVIGASI -->
+    <nav class="glass sticky top-0 z-50 px-5 md:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+
+            <a href="index.html" class="brand-logo">
+                <span class="brand-icon">🌷</span>
+                <span class="brand-name">Virda.</span>
+            </a>
+
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-5 md:gap-8 text-xs sm:text-sm font-semibold">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="tentang.html" class="nav-link">Tentang Saya</a>
+                <a href="keahlian.html" class="nav-link">Keahlian</a>
+                <a href="portofolio.html" class="nav-link">Portofolio</a>
+                <a href="motto.html" class="nav-link active-link">Motto</a>
+            </div>
+
+            <a href="motto.html"
+                class="hidden sm:block bg-gradient-to-r from-pink-500 to-purple-500 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition">
+                Motto Saya ↗
+            </a>
+        </div>
+    </nav>
+
+    <!-- MOTTO -->
+    <section class="px-6 pt-12 pb-20">
+
+        <div class="max-w-4xl mx-auto">
+
+            <!-- KOTAK MOTTO -->
+            <div class="glass rounded-[30px] p-6 md:p-10 text-center shadow-xl relative overflow-hidden">
+
+                <div class="absolute -top-16 -left-16 w-48 h-48 bg-pink-200 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+                <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-purple-200 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+                <div class="relative z-10">
+
+                    <div class="text-4xl mb-4">🌸</div>
+
+                    <p class="text-pink-500 font-bold tracking-widest text-sm">
+                        MOTTO & PRINSIP HIDUP
+                    </p>
+
+                    <h2 class="text-3xl md:text-4xl font-black mt-4">
+                        Terus Belajar,
+                        <span class="gradient-text">Terus Bertumbuh.</span>
+                    </h2>
+
+                    <p class="text-gray-500 leading-relaxed max-w-2xl mx-auto mt-6 text-sm md:text-base">
+                        "Tidak harus menjadi sempurna untuk memulai,
+                        cukup berani melangkah dan terus berkembang."
+                    </p>
+
+                    <div class="w-20 h-1 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full mx-auto mt-6"></div>
+
+                    <p class="text-gray-600 font-semibold mt-5">
+                        — Prinsip Hidup Virda ♡
+                    </p>
+
+                    <!-- KARTU PRINSIP -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-9">
+
+                        <div class="bg-white/70 rounded-2xl p-5 card-hover">
+                            <div class="text-3xl">🌱</div>
+                            <h3 class="font-bold mt-3">Terus Belajar</h3>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Selalu terbuka untuk ilmu dan pengalaman baru.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/70 rounded-2xl p-5 card-hover">
+                            <div class="text-3xl">✨</div>
+                            <h3 class="font-bold mt-3">Berani Mencoba</h3>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Tidak takut memulai dan mengeksplorasi hal baru.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/70 rounded-2xl p-5 card-hover">
+                            <div class="text-3xl">🦋</div>
+                            <h3 class="font-bold mt-3">Terus Berkembang</h3>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Menjadikan setiap proses sebagai pengalaman berharga.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-8 border-t border-pink-200/50">
+        <h2 class="text-2xl font-black gradient-text">Virda.</h2>
+        <p class="text-gray-500 text-sm mt-3">Dibuat oleh Virda</p>
+        <p class="text-gray-400 text-xs mt-2">
+            © 2026 | Terus Berkarya dan Berkembang.
+        </p>
+    </footer>
+
+</body>
+</html>
